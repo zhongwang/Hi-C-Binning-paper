@@ -1,4 +1,7 @@
 %% Submissions for peer-review must enable line-numbering 
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL metaBAT-LR_maintex_8-1-23.tex    Mon Aug  7 23:07:12 2023
+%DIF ADD metaBAT-LR_maintex_8-16-23.tex   Tue Aug 15 23:51:09 2023
 %% using the lineno option in the \documentclass command.
 %%
 %% Camera-ready submissions do not need line numbers, and
@@ -52,6 +55,71 @@
 \begin{abstract}
 Metagenome binning is a key step, downstream of metagenome assembly, to group scaffolds by their genome of origin. Although accurate binning has been achieved on datasets containing multiple samples from the same community, the completeness of binning is often low in datasets with a small number of samples due to a lack of robust species co-abundance information. In this study, we exploited the chromatin conformation information obtained from Hi-C sequencing and developed a new reference-independent algorithm, metaBAT-LR\added[id=HH]{, (Metagenome Binning with Abundance and Tetra-nucleotide frequencies - Long Range)}, to improve the binning completeness of these datasets. This self-supervised algorithm builds a model from a set of high-quality genome bins to predict scaffold pairs that are likely to be derived from the same genome. Then, it applies these predictions to merge incomplete genome bins, as well as recruit unbinned scaffolds.  We validated metaBAT-LR's ability to bin-merge and recruit scaffolds on both synthetic and real-world metagenome datasets of varying complexity. Benchmarking against similar software tools suggests that metaBAT-LR uncovers unique bins that were missed by all other methods. MetaBAT-LR is open-source and is available at \url{https://bitbucket.org/project-metabat/metabat-lr}.
 \end{abstract}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -81,15 +149,18 @@ Here, we proposed a new strategy to integrate Hi-C information into a self-super
 
 The ZymoBiomics Microbial Community Standard (Zymo Research Corp., Irvine, CA, United States), referred to as Zymo Mock dataset, contains 10 species: Pseudomonas aeruginosa, Escherichia coli, Salmonella eterica, Lactobacillus fermentum, Enterococcus faecalis, Staphylococcus aureus, Listeria monocytogenes, Bacillus subtilis, Saccharomyces cerevisiae, and Cryptococcus neoformans. Except Saccharomyces cerevisiae and Cryptococcus neoformans, which have an abundance of 2\%, the abundances of all species are at 12\% of total genomic DNA.\added[id=HH]{ The genome sizes of the reference genomes are as follows: Pseudomonas aeruginosa at 6738157 bp, Escherichia coli at 17764482 bp, Salmonella eterica at 18992842 bp, Lactobacillus fermentum at 8829291 bp, Enterococcus faecalis at 12660551 bp, Staphylococcus aureus at 11846679 bp, Listeria monocytogenes at 16894761 bp, Bacillus subtilis at 15028083 bp, Saccharomyces cerevisiae at 12616115 bp, and Cryptococcus neoformans at 18284049 bp.}
 
-Eight sequencing libraries (one whole genome shotgun, seven Hi-C) were generated from this synthetic community. Whole genome shotgun  (WGS)  libraries were generated using standard Illumina sequencing protocols. Two Hi-C libraries, CZWON and GPANX, were made using the Arima-HiC+ kits (Arima Genomics Inc, San Diego, CA), following the manufacturer's protocol. Five Hi-C libraries, CZWOH, GPANY, GPANZ, GPAOA and GPAOB, were created by Proximo Hi-C Microbe kits (Phase Genomics Inc, Seattle, WA) following the protocol provided by the manufacturer. This data has the NCBI BioProject number of: PRJNA846282. Detailed library creation parameters are shown in the Supplemental Section (Supplemental Figure S1). Intermediate data can be found at \url{https://doi.org/10.5281/zenodo.8226572}.
+Eight sequencing libraries (one whole genome shotgun, seven Hi-C) were generated from this synthetic community. Whole genome shotgun  (WGS)  libraries were generated using standard Illumina sequencing protocols. Two Hi-C libraries, CZWON and GPANX, were made using the Arima-HiC+ kits (Arima Genomics Inc, San Diego, CA), following the manufacturer's protocol. Five Hi-C libraries, CZWOH, GPANY, GPANZ, GPAOA and GPAOB, were created by Proximo Hi-C Microbe kits (Phase Genomics Inc, Seattle, WA) following the protocol provided by the manufacturer. This data has the NCBI BioProject number of: PRJNA846282. Detailed library creation parameters are shown in the Supplemental Section (Supplemental Figure S1). \DIFaddbegin \DIFadd{Intermediate data can be found at }\url{https://doi.org/10.5281/zenodo.8226572}\DIFadd{.
+}\DIFaddend 
 
 \subsubsection*{Cat Fecal Microbiome Dataset} 
 
-The Cat Fecal Microbiome Dataset was a publicly available dataset obtained through ProxiMeta (Phase Genomics, Seattle, WA, USA). The NCBI Accession numbers are the following: SRR22078166 for Hi-C reads and SRR23092418 for the WGS reads. Intermediate data can be found at \url{https://doi.org/10.5281/zenodo.8226572}.
+The Cat Fecal Microbiome Dataset was a publicly available dataset obtained through ProxiMeta (Phase Genomics, Seattle, WA, USA). The NCBI Accession numbers are the following: SRR22078166 for Hi-C reads and SRR23092418 for the WGS reads. \DIFaddbegin \DIFadd{Intermediate data can be found at }\url{https://doi.org/10.5281/zenodo.8226572}\DIFadd{.
+}\DIFaddend 
 
 \subsubsection*{Human Fecal Microbiome Dataset}
 
-The Human Fecal Microbiome Dataset is a published data set sequenced using the ProxiMeta Hi-C kit \citep{press2017hi}. The NCBI BioProject accessing ids are: PRJNA413092, Accession: SRR6131122, SRR6131123, and SRR6131124. This library contained two different Hi-C libraries that were constructed due to the use of two different restriction enzymes (SRR6131122, SRR6131124), MluCI and Sau3AI (New England Biolabs). Intermediate data can be found at \url{https://doi.org/10.5281/zenodo.8226572}.     
+The Human Fecal Microbiome Dataset is a published data set sequenced using the ProxiMeta Hi-C kit \citep{press2017hi}. The NCBI BioProject accessing ids are: PRJNA413092, Accession: SRR6131122, SRR6131123, and SRR6131124. This library contained two different Hi-C libraries that were constructed due to the use of two different restriction enzymes (SRR6131122, SRR6131124), MluCI and Sau3AI (New England Biolabs). \DIFaddbegin \DIFadd{Intermediate data can be found at }\url{https://doi.org/10.5281/zenodo.8226572}\DIFadd{.     
+}\DIFaddend 
 
 \subsection*{Preprocessing WGS and Hi-C Reads}
 
@@ -162,13 +233,13 @@ The machine learning model built previously is applied to all possible pairs amo
 %             \bottomrule
 %         \end{tabular}
 %         }
-        
+
 %     \end{minipage}
 
 %     \vspace{0.7cm}
-    
+
 %     \begin{minipage}[b]{\textwidth}
-        
+
 %         \captionsetup{justification=raggedright, singlelinecheck=false, labelformat=empty,font=large}
 %         \caption*{\textbf{B}}
 %         \begin{tabularx}{\textwidth}{
@@ -241,7 +312,11 @@ Both Cat Fecal and Human Fecal datasets were assembled and binned using the meth
 
 \subsection*{Hi-C Metagenome Binning Performance Comparison}
 
-BinSPreader v3.16.0.dev \citep{tolstoganov2022binspreader}, bin3C v0.1.1 \citep{demaere2019bin3c}, hicSPAdes \citep{ivanova2022hi}, and ProxiMeta Web version \citep{press2017hi} were run with default settings. The final metagenome bins generated by these software tools were compared with those of metaBAT-LR.\added[id=HH]{ As BinSPreader is a metagenome bin refiner, the same initial metagenome bins used as inputs for metaBAT-LR, were also used as initial input bins for BinSPReader. For the Zymo Mock Synthetic Dataset, AMBER v2.0.3 was used to evaluate and compare the performance of the five tools \citep{meyer2018amber}. For the Cat Fecal and Human Fecal datasets, dRep v2.0.0 \citep{olm2017drep} was used to compare the performance of the five methods.} dRep was used to determine whether two bins are the same. Using dRep, only bins that had an average nucleotide identity (ANI) score of 97\% or higher were considered the same. Furthermore, only medium-quality bins or above were used for comparison (contamination $<$ 10\% and completeness rate $\ge$ 50\% \citep{bowers2017minimum}). \added[id=HH]{A list of all commands-line options of tools used can be found in Supplemental Figure S2.}    
+BinSPreader v3.16.0.dev \citep{tolstoganov2022binspreader}, bin3C v0.1.1 \citep{demaere2019bin3c}, \DIFaddbegin \DIFadd{hicSPAdes \mbox{%DIFAUXCMD
+\citep{ivanova2022hi}}\hskip0pt%DIFAUXCMD
+, }\DIFaddend and ProxiMeta Web version \citep{press2017hi} were run with default settings. The final metagenome bins generated by these software tools were compared with those of metaBAT-LR.\DIFdelbegin %DIFDELCMD < \added[id=HH]{ As BinSPreader is a metagenome bin refiner, the same initial metagenome bins used as inputs for metaBAT-LR, were also used as initial input bins for BinSPReader. For the Zymo Mock Synthetic Dataset, AMBER v2.0.3 was used to evaluate and compare the performance of the four tools\citep{meyer2018amber}. For the Cat Fecal and Human Fecal datasets, dRep v2.0.0 \citep{olm2017drep} was used to compare the performance of the four methods.} %%%
+\DIFdelend \DIFaddbegin \added[id=HH]{ As BinSPreader is a metagenome bin refiner, the same initial metagenome bins used as inputs for metaBAT-LR, were also used as initial input bins for BinSPReader. For the Zymo Mock Synthetic Dataset, AMBER v2.0.3 was used to evaluate and compare the performance of the five tools \citep{meyer2018amber}. For the Cat Fecal and Human Fecal datasets, dRep v2.0.0 \citep{olm2017drep} was used to compare the performance of the five methods.} \DIFaddend dRep was used to determine whether two bins are the same. Using dRep, only bins that had an average nucleotide identity (ANI) score of 97\% or higher were considered the same. Furthermore, only medium-quality bins or above were used for comparison (contamination $<$ 10\% and completeness rate $\ge$ 50\% \citep{bowers2017minimum}). \DIFaddbegin \added[id=HH]{A list of all commands-line options of tools used can be found in Supplemental Figure S2.}    
+\DIFaddend 
 
 \section*{Results}
 
@@ -251,14 +326,14 @@ We tested the performance of metaBAT-LR on a dataset derived from a synthetic mo
 
 From a set of 15 initial bins obtained 20\% of the WGS reads from the GPANZ synthetic dataset, we selected the three largest bins to train a random forest model. From the information in these three bins, we created a balanced dataset with 91 pairs of scaffolds. We then randomly selected 70\%, 15\%, and 15\% of these pairs as training, validation, and testing datasets to build random forest models, respectively. The resulting model has a test accuracy of 0.992( precision: 0.994, recall: 0.997). (GPANZ 5,761,142) The high precision rate indicates that the model accurately discriminates scaffolds from different genomes. The lower recall rate indicates that it misses some connections between scaffolds of the same genome. This is expected because not all parts of a genome physically interact with each other and not all interactions could be captured by Hi-C. The impact on binning is likely low because a pair of scaffolds can be indirectly linked by a third scaffold of the same genome.  We observed similar results in all Hi-C datasets in addition to the GPANZ dataset, suggesting that the six selected features mentioned above are sufficient to predict scaffold-scaffold connections. 
 
-Although we used only 20\% WGS to form the initial bins and created a "sensitized" scenario to observe the effect of Hi-C, simply adding 10\% more WGS reads had little effect on genome completeness (Figure~\ref{fig:synthetic}). In contrast, except for 4/10 species that already have completeness greater than 90\%, adding the same amount of Hi-C reads led to a dramatic increase in percent genome completeness for four of the remaining five species \added[id=HH]{ (an increase in percent genome completeness from 26\% to 72\% for Lactobacillus fermentum, 45\% to 95\% for Bacillus subtilis, 51\% to 91\% for Enterococcus faecalis, and 37\% to 74\% for Saccharomyces cerevisiae, respectively).} The Eukaryotic genome that showed little improvement, such as Cryptococcus neoformans, have much larger genome sizes and lower abundance than others (at 2\% vs 12\% for the other 8 bacterial species), indicating poorer assemblies due to low sequencing depth. When metaBAT-LR is applied to bins that do not contain contamination, metaBAT-LR is able to increase genome completeness without increasing contamination (Figure~\ref{fig:synthetic} B Left Set of Bar Plots). In the cases where the original metagenome bins do have some contamination, metaBAT-LR generally does not increase the contamination. This is exemplified by Escherichia coli. Saccharomyces cerevisiae is a rare case in which contamination from the original metagenome bin caused the contamination rate to increase after the Hi-C information was integrated. By reviewing the total aligned length information generated by Quast, we are able to dissect why this occurred (Supplemental Figure S3). Most Saccharomyces cerevisiae scaffolds were clustered in bin 15. Bin 15 contains a small amount of contamination from scaffolds from Cryptococcus neoformans. The two organisms are different types of yeast and have low DNA material, at 2\%, from the synthetic community sample. When metaBAT-LR is applied, many unbinned Cryptococcus neoformans scaffolds are correctly recruited to bin 15 because there are no other bins that contain Cryptococcus neoformans scaffolds. This, in turn, increases the level of contamination for bin 15. This is why the contamination of Saccharomyces cerevisiae is so high in the figure.\added[id=HH]{ Further analysis from AMBER calculated the F1 score (bp) to be 0.951, while the average purity was at 0.955.}
+Although we used only 20\% WGS to form the initial bins and created a "sensitized" scenario to observe the effect of Hi-C, simply adding 10\% more WGS reads had little effect on genome completeness (Figure~\ref{fig:synthetic}). In contrast, except for 4/10 species that already have completeness greater than 90\%, adding the same amount of Hi-C reads led to a dramatic increase in percent genome completeness for four of the remaining five species \added[id=HH]{ (an increase in percent genome completeness from 26\% to 72\% for Lactobacillus fermentum, 45\% to 95\% for Bacillus subtilis, 51\% to 91\% for Enterococcus faecalis, and 37\% to 74\% for Saccharomyces cerevisiae, respectively).} The Eukaryotic genome that showed little improvement, such as Cryptococcus neoformans, have much larger genome sizes and lower abundance than others (at 2\% vs 12\% for the other 8 bacterial species), indicating poorer assemblies due to low sequencing depth. When metaBAT-LR is applied to bins that do not contain contamination, metaBAT-LR is able to increase genome completeness without increasing contamination (Figure~\ref{fig:synthetic} B Left Set of Bar Plots). In the cases where the original metagenome bins do have some contamination, metaBAT-LR generally does not increase the contamination. This is exemplified by Escherichia coli. Saccharomyces cerevisiae is a rare case in which contamination from the original metagenome bin caused the contamination rate to increase after the Hi-C information was integrated. By reviewing the total aligned length information generated by Quast, we are able to dissect why this occurred (Supplemental Figure \DIFdelbegin \DIFdel{S2}\DIFdelend \DIFaddbegin \DIFadd{S3}\DIFaddend ). Most Saccharomyces cerevisiae scaffolds were clustered in bin 15. Bin 15 contains a small amount of contamination from scaffolds from Cryptococcus neoformans. The two organisms are different types of yeast and have low DNA material, at 2\%, from the synthetic community sample. When metaBAT-LR is applied, many unbinned Cryptococcus neoformans scaffolds are correctly recruited to bin 15 because there are no other bins that contain Cryptococcus neoformans scaffolds. This, in turn, increases the level of contamination for bin 15. This is why the contamination of Saccharomyces cerevisiae is so high in the figure.\added[id=HH]{ Further analysis from AMBER calculated the F1 score (bp) to be 0.951, while the average purity was at 0.955.}
 
 
 In addition, both bin merging and scaffold recruitment observed in the genomes described above are dependent on the Hi-C sequencing depth. The analysis did not show significant differences in genome completeness depending on the number of Hi-C reads used, with a median genome completeness of around 95\% for all cases.  
 %Coverage depth analysis shows that once the number of Hi-C reads used drops below 10\%, the observed improvement in genome completeness disappeared. When the number of Hi-C reads decrease, it becomes less likely the algorithm is able to find Hi-C reads that show an association between two contigs.
-More Hi-C reads did not appear to confer more benefits (Supplemental Figure S4).   
+More Hi-C reads did not appear to confer more benefits (Supplemental Figure \DIFdelbegin \DIFdel{S3}\DIFdelend \DIFaddbegin \DIFadd{S4}\DIFaddend ).   
 
-We performed similar experiments by varying different Hi-C sequencing kits and different laboratory protocols (Supplemental Figure S1). The results of all data sets show an improvement in genome completeness to various degrees (Supplemental Figure S5). 
+We performed similar experiments by varying different Hi-C sequencing kits and different laboratory protocols (Supplemental Figure S1). The results of all data sets show an improvement in genome completeness to various degrees (Supplemental Figure \DIFdelbegin \DIFdel{S4}\DIFdelend \DIFaddbegin \DIFadd{S5}\DIFaddend ). 
 
   
 \begin{figure}[ht!]
@@ -290,7 +365,7 @@ We observed similar results from the human fecal dataset. Among the initial set 
 \subsection*{Fine Tuning the Number of Bins Needed to Train the Random Forest Model}
 While the default number is to use the 10 largest metagenome bins to train the random forest, it is a variable that users can change based on their own dataset. If too few bins are used for the training, the model that is generated might not be as accurate. If too many bins are used in the training, there is a chance that the model will be overfit. Furthermore, requiring more bins to be used in training might force metaBAT-LR to train on bins that are not high quality. 
 
-We tested a range of between 5 and 25 bins to be used for training in the human fecal dataset, as it was the most complex, before using CheckM to assess the completeness of the genome and the contamination of the bins.  As the number of bins used for training increased, there was a minimal increase in genome completeness in a small number of metagenome bins, but this also increased the contamination rate of those same bins. There were a total of 12 metagenome bins affected by the number of bins used for training. The increases in completeness and contamination can be found in Supplemental Figure S6.     
+We tested a range of between 5 and 25 bins to be used for training in the human fecal dataset, as it was the most complex, before using CheckM to assess the completeness of the genome and the contamination of the bins.  As the number of bins used for training increased, there was a minimal increase in genome completeness in a small number of metagenome bins, but this also increased the contamination rate of those same bins. There were a total of 12 metagenome bins affected by the number of bins used for training. The increases in completeness and contamination can be found in Supplemental Figure \DIFdelbegin \DIFdel{S5}\DIFdelend \DIFaddbegin \DIFadd{S6}\DIFaddend .     
 
 
 \begin{figure*}[ht!]
@@ -303,7 +378,7 @@ We tested a range of between 5 and 25 bins to be used for training in the human 
 
 % \begin{figure}[ht!]
 %     \centering
-    
+
 %     \begin{minipage}[t]{0.50\textwidth}
 %         \captionsetup{justification=raggedright, singlelinecheck=false, labelformat=empty,font=large}
 %         \caption*{\textbf{A}}
@@ -341,7 +416,7 @@ We tested a range of between 5 and 25 bins to be used for training in the human 
 %         \includegraphics[scale=0.42]{human_filtered_venn4_cropped.pdf}
 %     \end{minipage}
 %     \hfill
-    
+
 
 %     \caption{A comparison of four different Hi-C binning methods. 
 %     \\Information for \textbf{(A)} and \textbf{(B)}, was generated using AMBER. Only medium-quality bins (bins with a contamination rate of less than 10\% and genome completeness of 50\% or greater) were used for comparison.\textbf{(C)},\textbf{(D)},\textbf{(E)}, and \textbf{(F)} were generated using information from dRep. This was done with a 97\% ANI threshold for two bins to be considered the same genome. We also used dRep to impose a 200,000 bp minimum length. We also compared only bins that are of medium quality. The stacked bar graphs \textbf{(A)}, \textbf{(C)}, and \textbf{(E)} give details about the number of bins found at varying genome completeness levels for each of the methods when applied to the Zymo Mock Synthetic, Cat Fecal, and Human Fecal datasets respectively. The three Venn diagrams \textbf{(B)}, \textbf{(D)}, and \textbf{(F)} show the number of overlapping bins found for the Zymo Mock Synthetic, Cat Fecal, and Human Fecal datasets respectively.}
@@ -357,19 +432,32 @@ We tested a range of between 5 and 25 bins to be used for training in the human 
 \end{figure}
 \subsection*{MetaBAT-LR Has Comparable Binning Performance to Alternative Methods with a Unique Set of Bins}
 
-\added[id=HH]{MetaBAT-LR adopts a different algorithm from two other popular software tools based on Hi-C, bin3C \citep{demaere2019bin3c} and ProxiMeta \citep{press2017hi}, as well as the newly published BinSPreader \citep{tolstoganov2022binspreader} and hicSPAdes \citep{ivanova2022hi}. We compared the binning performance of these five software tools on the Zymo Mock Synthetic dataset, the CAT Fecal microbiome dataset, and the Human Fecal microbiome data sets. One important thing to note is that bin3c and BinSPreader do not merge existing bins, which may influence genome completeness. We used AMBER to evaluate the four methods that were applied to the Zymo Mock Synthetic dataset (Figure \ref{fig:Comparison_Fig} A and B). When looking at metagenome bins with less than 10\% contamination and various levels of completeness, MetaBAT-LR was able to find the highest number of metagenome bins at above 90\% genome completeness and the highest number of bins overall. A detailed AMBER \citep{meyer2018amber} evaluation of these bins can be found in Supplemental Figure S7. AMBER-generated graphs summarizing the evaluations can be found in Supplemental Figure S8. The Quality of Bins graph shows that MetaBAT-LR results are the closest to the gold standard. Furthermore, the F1 score and average completeness score (bp) of metaBAT-LR, at 0.951 and 0.947 respectively, which was the highest among all tools. The method that came closest to matching metaBAT-LR was binSPreader, which had an average completeness score of 0.674 and an F1 score of 0.800. The other methods were much lower.}
+\DIFdelbegin %DIFDELCMD < \added[id=HH]{MetaBAT-LR adopts a different algorithm from two other popular software tools based on Hi-C, bin3C \citep{demaere2019bin3c} and ProxiMeta \citep{press2017hi}, as well as the newly published BinSPreader \citep{tolstoganov2022binspreader} and hicSPAdes \citep{ivanova2022hi}. We compared the binning performance of these five software tools on the Zymo Mock Synthetic dataset, the CAT Fecal microbiome dataset, and the Human Fecal microbiome data sets. We used AMBER to evaluate the four methods that were applied to the Zymo Mock Synthetic dataset (Figure \ref{fig:Comparison_Fig} A and B). When looking at metagenome bins with less than 10\% contamination and various levels of completeness, MetaBAT-LR was able to find the highest number of metagenome bins at above 90\% genome completeness and the highest number of bins overall. A detailed AMBER \citep{meyer2018amber} evaluation of these bins can be found in Supplemental Figure S7. AMBER-generated graphs summarizing the evaluations can be found in Supplemental Figure S7. The Quality of Bins graph shows that MetaBAT-LR results are the closest to the gold standard. Furthermore, the F1 score and average completeness score (bp) of metaBAT-LR, at 0.951 and 0.947 respectively, which was the highest among all tools. The method that came closest to matching metaBAT-LR was binSPreader, which had an average completeness score of 0.674 and an F1 score of 0.800. The other methods were much lower.}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \added[id=HH]{MetaBAT-LR adopts a different algorithm from two other popular software tools based on Hi-C, bin3C \citep{demaere2019bin3c} and ProxiMeta \citep{press2017hi}, as well as the newly published BinSPreader \citep{tolstoganov2022binspreader} and hicSPAdes \citep{ivanova2022hi}. We compared the binning performance of these five software tools on the Zymo Mock Synthetic dataset, the CAT Fecal microbiome dataset, and the Human Fecal microbiome data sets. One important thing to note is that bin3c and BinSPreader do not merge existing bins, which may influence genome completeness. We used AMBER to evaluate the four methods that were applied to the Zymo Mock Synthetic dataset (Figure \ref{fig:Comparison_Fig} A and B). When looking at metagenome bins with less than 10\% contamination and various levels of completeness, MetaBAT-LR was able to find the highest number of metagenome bins at above 90\% genome completeness and the highest number of bins overall. A detailed AMBER \citep{meyer2018amber} evaluation of these bins can be found in Supplemental Figure S7. AMBER-generated graphs summarizing the evaluations can be found in Supplemental Figure S8. The Quality of Bins graph shows that MetaBAT-LR results are the closest to the gold standard. Furthermore, the F1 score and average completeness score (bp) of metaBAT-LR, at 0.951 and 0.947 respectively, which was the highest among all tools. The method that came closest to matching metaBAT-LR was binSPreader, which had an average completeness score of 0.674 and an F1 score of 0.800. The other methods were much lower.}
+\DIFaddend 
 
-In the case of the Cat Fecal and Human Fecal microbiome datasets, we used dRep to match the corresponding bins across the three outputs and CheckM to filter out low-quality bins (Materials and Methods). The final count of bins of medium quality or greater ( $\ge$ 50\% completeness, $<$ 10\% contamination) was used as a metric to compare the performance of three tools. In both real-world datasets, there is a significant portion of the bins that are shared among the five tools. In the Cat dataset\added[id=HH]{ (Figure \ref{fig:Comparison_Fig}B), 19 are shared between all five, while the five together formed 50 bins (Figure \ref{fig:Comparison_Fig}D). No tools found all 50 bins, while BinSPreader and ProxiMeta each found a single unique bin that was not found by the others. MetaBAT-LR was able to find the highest number of bins, 43 bins. This was followed by ProxiMeta, which produced 41 bins, bin3C at 37, BinSPreader at 34, and hicSPAdes at 30. A breakdown of the completeness level of these bins can be found in Figure \ref{fig:Comparison_Fig}C.}
-%\Among the eight bins uniquely found by metaBAT-LR, all are of median quality draft genomes or higher ( $\ge$ 50\% completeness, $<$ 10\% contamination), suggesting that these bins are probably real metagenome bins that the other methods had missed. 
+In the case of the Cat Fecal and Human Fecal microbiome datasets, we used dRep to match the corresponding bins across the three outputs and CheckM to filter out low-quality bins (Materials and Methods). The final count of bins of medium quality or greater ( $\ge$ 50\% completeness, $<$ 10\% contamination) was used as a metric to compare the performance of three tools. In both real-world datasets, there is a significant portion of the bins that are shared among the \DIFdelbegin \DIFdel{four }\DIFdelend \DIFaddbegin \DIFadd{five }\DIFaddend tools. In the Cat dataset\DIFdelbegin %DIFDELCMD < \added[id=HH]{ (Figure \ref{fig:Comparison_Fig}B), 22 are shared between all four, while the four together formed 50 bins (Figure 4A). No tools found all 50 bins, while BinSPreader and ProxiMeta each found a single unique bin that was not found by the others. MetaBAT-LR was able to find the highest number of bins, 43 bins. This was followed by ProxiMeta, which produced 41 bins, bin3C at 37, and BinSPreader at 34. A breakdown of the completeness level of these bins can be found in Figure \ref{fig:Comparison_Fig}C.}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \added[id=HH]{ (Figure \ref{fig:Comparison_Fig}B), 19 are shared between all five, while the five together formed 50 bins (Figure \ref{fig:Comparison_Fig}D). No tools found all 50 bins, while BinSPreader and ProxiMeta each found a single unique bin that was not found by the others. MetaBAT-LR was able to find the highest number of bins, 43 bins. This was followed by ProxiMeta, which produced 41 bins, bin3C at 37, BinSPreader at 34, and hicSPAdes at 30. A breakdown of the completeness level of these bins can be found in Figure \ref{fig:Comparison_Fig}C.}
+\DIFaddend %\Among the eight bins uniquely found by metaBAT-LR, all are of median quality draft genomes or higher ( $\ge$ 50\% completeness, $<$ 10\% contamination), suggesting that these bins are probably real metagenome bins that the other methods had missed. 
 %\In the human fecal data set, the data paint a similar picture. The number of shared bins among the three tools was 27. 5 metagenome bins were found uniquely by metaBAT-LR. Among these unique metagenome bins, all were medium-quality bins or higher, with 2 having a completeness level of more than 80\%. A full list of the unique bins can be found in Supplemental Figure S6.   
-\added[id=HH]{In the Human dataset, 14 bins are shared among all five methods, while the five together formed 48 bins (Figure \ref{fig:Comparison_Fig}F). MetaBAT-LR and ProxiMeta each found two unique bins that were not found by the others. The unique bins found by metaBAT-LR can be found in Supplemental Figure S9. MetaBAT-LR was able to find the 37 bins in total. This is slightly less than the 42 bins found by ProxiMeta but higher than the 34 bins found by bin3C, the 28 bins found by hicSPAdes, and the 26 bins found by BinSPreader. The completeness levels of these bins can be found in Figure \ref{fig:Comparison_Fig}E. Tables detailing the exact number of bins found at each completeness level for all three datasets can be found in Supplemental Figure S10.}
+\DIFdelbegin %DIFDELCMD < \added[id=HH]{In the Human dataset, 19 bins are shared among all four methods, while the four together formed 48 bins (Figure \ref{fig:Comparison_Fig}F). MetaBAT-LR and ProxiMeta each found two unique bins that were not found by the others, while bin3C found only 1. The unique bins found by metaBAT-LR can be found in Supplemental Figure S8. MetaBAT-LR was able to find the 38 bins in total. This is slightly less than the 42 bins found by ProxiMeta but higher than the 35 bins found by bin3C and the 27 bins found by BinSPreader. The completeness levels of these bins can be found in Figure \ref{fig:Comparison_Fig}E. Tables detailing the exact number of bins found at each completeness level for all three datasets can be found in Supplemental Figure S9}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \added[id=HH]{In the Human dataset, 14 bins are shared among all five methods, while the five together formed 48 bins (Figure \ref{fig:Comparison_Fig}F). MetaBAT-LR and ProxiMeta each found two unique bins that were not found by the others. The unique bins found by metaBAT-LR can be found in Supplemental Figure S9. MetaBAT-LR was able to find the 37 bins in total. This is slightly less than the 42 bins found by ProxiMeta but higher than the 34 bins found by bin3C, the 28 bins found by hicSPAdes, and the 26 bins found by BinSPreader. The completeness levels of these bins can be found in Figure \ref{fig:Comparison_Fig}E. Tables detailing the exact number of bins found at each completeness level for all three datasets can be found in Supplemental Figure S10.}
+\DIFaddend 
 
 
 \section*{Discussion}
 
-New types of sequencing data are being generated to overcome the low completeness of metagenome bins generated from short-read assemblies with few samples, including Hi-C, long-read sequencing, and single-cell sequencing\citep{demaere2019bin3c,Bickhart2022GeneratingLC,Arikawa2021RecoveryOH, bowers2022dissecting}. Although these new data have shown great promise in improving binning quality, they often increase the analytic complexity. Furthermore, it is challenging to integrate these heterogeneous datasets into a single framework. In this study, we presented a framework based on self-supervised machine learning to take advantage of such datasets. As a proof of concept, we show that it can effectively leverage Hi-C information to improve genome completeness in both synthetic and real-world datasets of various complexity. It should be straightforward to add other types of data as features into the random forest model in metaBAT-LR, or multiple replicates of the same type of data. 
+New types of sequencing data are being generated to overcome the low completeness of metagenome bins generated from short-read assemblies with few samples, including Hi-C, long-read sequencing, and single-cell sequencing\DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citep{demaere2019bin3c,Bickhart2022GeneratingLC,Arikawa2021RecoveryOH, bowers2022dissecting}}\hskip0pt%DIFAUXCMD
+}\DIFaddend . Although these new data have shown great promise in improving binning quality, they often increase the analytic complexity. Furthermore, it is challenging to integrate these heterogeneous datasets into a single framework. In this study, we presented a framework based on self-supervised machine learning to take advantage of such datasets. As a proof of concept, we show that it can effectively leverage Hi-C information to improve genome completeness in both synthetic and real-world datasets of various complexity. It should be straightforward to add other types of data as features into the random forest model in metaBAT-LR, or multiple replicates of the same type of data. 
 
-\added[id=HH]{The primary goal of this research is to demonstrate that long-range data, such as Hi-C, can be utilized within a robust machine learning framework to enhance metagenome binning outcomes. This is also why we chose not to benchmark our method against numerous metagenome binners that do not incorporate Hi-C reads. If the assembly/binning were perfect, i.e., using the gold standard, then additional Hi-C information will not be able to improve genome completeness among the bins. We have observed varying performances of different binners on different datasets (as seen in the CAMI2 challenge \citep{meyer2021critical}). We anticipate that metaBAT-LR has the potential to improve the binning experiments of all metagenome binners since it is not dependent on the output of any specific binning tool (we demonstrated this with MetaBAT 2 as an example).}
+\DIFdelbegin %DIFDELCMD < \added[id=HH]{The primary goal of this research is to demonstrate that long-range data, such as Hi-C, can be utilized within a robust machine learning framework to enhance metagenome binning outcomes. This is also why we chose not to benchmark our method against numerous metagenome binners that do not incorporate Hi-C reads. If the assembly/binning were perfect, i.e., using the gold standard, then additional Hi-C information will not be able to improve genome completeness among the bins. We have observed varying performances of different binners on different datasets (as seen in the CAMI2 challenge. We anticipate that metaBAT-LR has the potential to improve the binning experiments of all metagenome binners since it is not dependent on the output of any specific binning tool (we demonstrated this with MetaBAT 2 as an example).}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \added[id=HH]{The primary goal of this research is to demonstrate that long-range data, such as Hi-C, can be utilized within a robust machine learning framework to enhance metagenome binning outcomes. This is also why we chose not to benchmark our method against numerous metagenome binners that do not incorporate Hi-C reads. If the assembly/binning were perfect, i.e., using the gold standard, then additional Hi-C information will not be able to improve genome completeness among the bins. We have observed varying performances of different binners on different datasets (as seen in the CAMI2 challenge \citep{meyer2021critical}). We anticipate that metaBAT-LR has the potential to improve the binning experiments of all metagenome binners since it is not dependent on the output of any specific binning tool (we demonstrated this with MetaBAT 2 as an example).}
+\DIFaddend 
 
 One limitation of our method is metaBAT-LR's dependence on having good Hi-C read-pair connectivity. Sometimes called informative read pairs, these are Hi-C read pairs that are able to map to different contigs. Our method depends on these types of read pair in order to make judgments about recruiting contigs or joining bins. We use the tool hic\textunderscore qc (\url{https://github.com/phasegenomics/hic_qc}) to help determine whether the data set in question has enough Hi-C read connectivity for metaBAT-LR to work.
 
